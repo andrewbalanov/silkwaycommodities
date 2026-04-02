@@ -10,7 +10,7 @@ function PrivacyPolicy() {
             <p className="privacy__updated">Last updated: April 3, 2026</p>
 
             <p>
-              Silkway Commodities DMCC ("we", "us", or "our") respects your privacy and is committed
+              Silkway Commodities LLC ("we", "us", or "our") respects your privacy and is committed
               to protecting your personal data. This Privacy Policy explains how we collect, use, and
               safeguard your information when you visit our website or interact with our services.
             </p>
@@ -100,7 +100,7 @@ function PrivacyPolicy() {
             </p>
             <ul>
               <li>Email: <a href="mailto:trade@silkwaycommodities.com">trade@silkwaycommodities.com</a></li>
-              <li>Address: DMCC Business Centre, Jewellery & Gemplex 3, Jumeirah Lakes Towers, Dubai, UAE</li>
+              <li>Address: 6-Tor Ko'chasi, 23, Tashkent, Uzbekistan</li>
             </ul>
           </div>
         </div>

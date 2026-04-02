@@ -10,7 +10,7 @@ function TermsOfService() {
             <p className="privacy__updated">Last updated: April 3, 2026</p>
 
             <p>
-              Welcome to the website of Silkway Commodities DMCC ("we", "us", or "our"). By
+              Welcome to the website of Silkway Commodities LLC ("we", "us", or "our"). By
               accessing or using our website, you agree to be bound by these Terms of Service. If
               you do not agree with any part of these terms, please do not use our website.
             </p>
@@ -25,7 +25,7 @@ function TermsOfService() {
             <h2>2. Intellectual Property</h2>
             <p>
               All content on this website — including text, graphics, logos, images, and software —
-              is the property of Silkway Commodities DMCC or its licensors and is protected by
+              is the property of Silkway Commodities LLC or its licensors and is protected by
               applicable intellectual property laws. You may not reproduce, distribute, modify, or
               create derivative works from any content without our prior written consent.
             </p>
@@ -62,7 +62,7 @@ function TermsOfService() {
 
             <h2>7. Limitation of Liability</h2>
             <p>
-              To the fullest extent permitted by law, Silkway Commodities DMCC shall not be liable
+              To the fullest extent permitted by law, Silkway Commodities LLC shall not be liable
               for any indirect, incidental, special, consequential, or punitive damages arising out
               of or relating to your use of the website, even if we have been advised of the
               possibility of such damages.
@@ -78,9 +78,8 @@ function TermsOfService() {
             <h2>9. Governing Law</h2>
             <p>
               These Terms of Service shall be governed by and construed in accordance with the laws
-              of the United Arab Emirates, as applicable in the Emirate of Dubai and the DMCC Free
-              Zone. Any disputes arising under these terms shall be subject to the exclusive
-              jurisdiction of the courts of Dubai, UAE.
+              of the Republic of Uzbekistan. Any disputes arising under these terms shall be subject
+              to the exclusive jurisdiction of the courts of Tashkent, Uzbekistan.
             </p>
 
             <h2>10. Changes to These Terms</h2>
@@ -96,7 +95,7 @@ function TermsOfService() {
             </p>
             <ul>
               <li>Email: <a href="mailto:trade@silkwaycommodities.com">trade@silkwaycommodities.com</a></li>
-              <li>Address: DMCC Business Centre, Jewellery & Gemplex 3, Jumeirah Lakes Towers, Dubai, UAE</li>
+              <li>Address: 6-Tor Ko'chasi, 23, Tashkent, Uzbekistan</li>
             </ul>
           </div>
         </div>

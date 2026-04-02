@@ -141,13 +141,14 @@
 /* Bottom */
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 24px;
 }
 
 .footer__bottom-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 32px 24px;
+  padding: 28px 24px 0;
 }
 
 .footer__bottom p {
