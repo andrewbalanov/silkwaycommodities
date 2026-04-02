@@ -309,7 +309,7 @@ function Contact() {
                   />
                   <span>
                     I agree to the processing of my personal data in accordance with the{' '}
-                    <a href="#" onClick={(e) => e.stopPropagation()}>Privacy Policy</a>
+                    <Link to="/privacy-policy" onClick={(e) => e.stopPropagation()}>Privacy Policy</Link>
                   </span>
                 </label>
 
