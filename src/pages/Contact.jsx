@@ -2,22 +2,58 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Contact.css'
 
+const productOptions = [
+  'Urea',
+  'DAP',
+  'MAP',
+  'AN / CAN',
+  'NPK Compound',
+  'Ammonium Sulphate',
+  'MOP / SOP',
+  'TSP / SSP',
+  'Wheat',
+  'Corn',
+  'Sunflower Oil',
+  'Sulphur',
+  'Bitumen',
+  'Base Oil',
+  'Other',
+]
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     subject: '',
+    products: [],
     message: '',
+    consent: false,
   })
+  const [productsOpen, setProductsOpen] = useState(false)
   const [status, setStatus] = useState(null)
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    const { name, value, type, checked } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }))
+  }
+
+  const toggleProduct = (product) => {
+    setFormData((prev) => ({
+      ...prev,
+      products: prev.products.includes(product)
+        ? prev.products.filter((p) => p !== product)
+        : [...prev.products, product],
+    }))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!formData.consent) return
     setStatus('sending')
     try {
       const res = await fetch('/api/contact', {
@@ -27,7 +63,8 @@ function Contact() {
       })
       if (res.ok) {
         setStatus('success')
-        setFormData({ name: '', email: '', company: '', subject: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', company: '', subject: '', products: [], message: '', consent: false })
+        setProductsOpen(false)
       } else {
         setStatus('error')
       }
@@ -177,6 +214,16 @@ function Contact() {
 
                 <div className="contact__form-row">
                   <div className="contact__form-group">
+                    <label>Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+1 234 567 890"
+                    />
+                  </div>
+                  <div className="contact__form-group">
                     <label>Company</label>
                     <input
                       type="text"
@@ -186,6 +233,9 @@ function Contact() {
                       placeholder="Company name"
                     />
                   </div>
+                </div>
+
+                <div className="contact__form-row">
                   <div className="contact__form-group">
                     <label>Subject *</label>
                     <select
@@ -202,6 +252,39 @@ function Contact() {
                       <option value="Other">Other</option>
                     </select>
                   </div>
+                  <div className="contact__form-group">
+                    <label>Products of Interest</label>
+                    <div className="contact__multiselect">
+                      <button
+                        type="button"
+                        className="contact__multiselect-trigger"
+                        onClick={() => setProductsOpen(!productsOpen)}
+                      >
+                        <span>
+                          {formData.products.length === 0
+                            ? 'Select products'
+                            : `${formData.products.length} selected`}
+                        </span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                        </svg>
+                      </button>
+                      {productsOpen && (
+                        <div className="contact__multiselect-dropdown">
+                          {productOptions.map((product) => (
+                            <label key={product} className="contact__multiselect-option">
+                              <input
+                                type="checkbox"
+                                checked={formData.products.includes(product)}
+                                onChange={() => toggleProduct(product)}
+                              />
+                              <span>{product}</span>
+                            </label>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="contact__form-group contact__form-group--full">
@@ -212,11 +295,25 @@ function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    placeholder="Please describe your requirements — product type, quantity, destination port, preferred delivery terms..."
+                    placeholder="Please describe your requirements — quantity, destination port, preferred delivery terms..."
                   />
                 </div>
 
-                <button type="submit" className="btn btn-secondary btn-lg contact__submit" disabled={status === 'sending'}>
+                <label className="contact__consent">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleChange}
+                    required
+                  />
+                  <span>
+                    I agree to the processing of my personal data in accordance with the{' '}
+                    <a href="#" onClick={(e) => e.stopPropagation()}>Privacy Policy</a>
+                  </span>
+                </label>
+
+                <button type="submit" className="btn btn-secondary btn-lg contact__submit" disabled={status === 'sending' || !formData.consent}>
                   {status === 'sending' ? 'Sending...' : 'Send Message'}
                   {status !== 'sending' && (
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

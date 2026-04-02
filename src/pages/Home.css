@@ -377,6 +377,7 @@
 
 @media (max-width: 768px) {
   .hero__content { padding-top: 140px; padding-bottom: 60px; }
+  .hero__tag { display: none; }
   .hero__title { font-size: 36px; letter-spacing: -1px; }
   .hero__subtitle { font-size: 16px; }
   .hero__actions { flex-direction: column; }

@@ -17,7 +17,7 @@ app.use(express.static(join(__dirname, 'dist')))
 
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
-  const { name, email, company, subject, message } = req.body
+  const { name, email, phone, company, subject, products, message } = req.body
 
   if (!name || !email || !subject || !message) {
     return res.status(400).json({ error: 'Missing required fields' })
@@ -68,6 +68,7 @@ app.post('/api/contact', async (req, res) => {
                 <p style="margin:0;color:#8B95A8;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;">From</p>
                 <p style="margin:4px 0 0;color:#1A1A2E;font-size:15px;font-weight:600;">${name}</p>
                 <a href="mailto:${email}" style="color:#C8952E;font-size:13px;text-decoration:none;">${email}</a>
+                ${phone ? `<p style="margin:4px 0 0;color:#5A6377;font-size:13px;">${phone}</p>` : ''}
               </td>
               <td style="width:16px;"></td>
               <td style="padding:16px 20px;background:#f8f9fb;border-radius:8px;width:50%;vertical-align:top;">
@@ -77,6 +78,16 @@ app.post('/api/contact', async (req, res) => {
             </tr>
           </table>
         </td></tr>
+
+        ${products && products.length > 0 ? `
+        <!-- Products -->
+        <tr><td style="padding:24px 40px 0;">
+          <p style="margin:0 0 12px;color:#8B95A8;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;">Products of Interest</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            ${products.map(p => `<span style="display:inline-block;padding:6px 14px;background:#f8f9fb;border:1px solid #e4e7ec;border-radius:20px;font-size:13px;color:#1A1A2E;font-weight:500;">${p}</span>`).join('')}
+          </div>
+        </td></tr>
+        ` : ''}
 
         <!-- Message -->
         <tr><td style="padding:24px 40px 32px;">

@@ -64,6 +64,12 @@ function Header() {
             Get a Quote
           </Link>
 
+          {/* Mobile CTA + Burger */}
+          <div className="header__mobile-actions">
+            <Link to="/contact" className="header__mobile-cta btn btn-primary">
+              Get a Quote
+            </Link>
+
           {/* Mobile Burger */}
           <button
             className={`header__burger ${menuOpen ? 'header__burger--open' : ''}`}
@@ -72,6 +78,7 @@ function Header() {
           >
             <span /><span /><span />
           </button>
+          </div>
         </div>
       </header>
 

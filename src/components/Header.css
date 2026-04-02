@@ -125,6 +125,18 @@
   font-size: 14px;
 }
 
+/* ===== MOBILE ACTIONS ===== */
+.header__mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__mobile-cta {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
 /* ===== BURGER ===== */
 .header__burger {
   display: none;
@@ -202,6 +214,9 @@
   }
   .header__cta.btn {
     display: none;
+  }
+  .header__mobile-actions {
+    display: flex;
   }
   .header__burger {
     display: flex;
