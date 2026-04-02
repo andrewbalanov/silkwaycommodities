@@ -9,12 +9,11 @@ const quickLinks = [
 ]
 
 const products = [
-  'Urea',
-  'DAP / MAP',
-  'AN / CAN',
-  'NPK Compound',
-  'MOP / SOP',
-  'Sulphur & Bitumen',
+  { label: 'Nitrogen Fertilizers', anchor: 'nitrogen' },
+  { label: 'Phosphate Fertilizers', anchor: 'phosphate' },
+  { label: 'Potash & Complex', anchor: 'potash' },
+  { label: 'Agricultural Products', anchor: 'agricultural' },
+  { label: 'Petrochemicals', anchor: 'petrochemical' },
 ]
 
 function Footer() {
@@ -56,7 +55,9 @@ function Footer() {
             <h4 className="footer__col-title">Key Products</h4>
             <ul className="footer__links">
               {products.map((p) => (
-                <li key={p}><span>{p}</span></li>
+                <li key={p.anchor}>
+                  <Link to={`/products#${p.anchor}`}>{p.label}</Link>
+                </li>
               ))}
             </ul>
           </div>

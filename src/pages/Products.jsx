@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import './Products.css'
 
 const categories = [
@@ -180,6 +181,19 @@ const categories = [
 ]
 
 function Products() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1))
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      }
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [hash])
+
   return (
     <div className="products-page">
       {/* Banner */}
