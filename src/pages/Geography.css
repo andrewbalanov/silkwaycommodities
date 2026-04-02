@@ -1,0 +1,223 @@
+/* ===== OFFICES ===== */
+.geo__offices-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.geo__office {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.geo__office:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.geo__office-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.geo__office-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.geo__office:hover .geo__office-image img {
+  transform: scale(1.05);
+}
+
+.geo__office-header {
+  background: var(--navy-800);
+  padding: 28px 36px;
+  color: white;
+}
+
+.geo__office-type {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-400);
+}
+
+.geo__office-city {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.geo__office-flag {
+  font-size: 24px;
+}
+
+.geo__office-country {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+}
+
+.geo__office-body {
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.geo__office-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.geo__office-detail svg {
+  color: var(--gold-500);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.geo__office-tags {
+  padding: 0 36px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.geo__office-tag {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy-600);
+  background: var(--bg-section);
+  border-radius: 20px;
+}
+
+/* ===== MARKETS ===== */
+.geo__markets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.geo__market {
+  padding: 28px;
+}
+
+.geo__market-region {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.geo__market-countries {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.geo__market-role {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-600);
+  background: var(--gold-100);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ===== LOGISTICS ===== */
+.geo__logistics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.geo__logistics-card {
+  text-align: center;
+  padding: 40px 28px;
+}
+
+.geo__logistics-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--navy-800);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-400);
+  margin: 0 auto 20px;
+}
+
+.geo__logistics-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.geo__logistics-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== BOTTOM SPACING ===== */
+.geo-page {
+  padding-bottom: 60px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .geo__markets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .geo__offices-grid {
+    grid-template-columns: 1fr;
+  }
+  .geo__markets-grid {
+    grid-template-columns: 1fr;
+  }
+  .geo__logistics-grid {
+    grid-template-columns: 1fr;
+  }
+  .geo__office-header {
+    padding: 24px;
+  }
+  .geo__office-city {
+    font-size: 22px;
+  }
+  .geo__office-body {
+    padding: 20px 24px;
+  }
+  .geo__office-tags {
+    padding: 0 24px 24px;
+  }
+  .geo__logistics-card {
+    padding: 28px 20px;
+  }
+}
