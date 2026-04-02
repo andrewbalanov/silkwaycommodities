@@ -97,7 +97,7 @@ function Footer() {
           <p>&copy; {new Date().getFullYear()} Silkway Commodities. All rights reserved.</p>
           <div className="footer__bottom-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
-            <a href="#">Terms of Service</a>
+            <Link to="/terms-of-service">Terms of Service</Link>
           </div>
         </div>
       </div>

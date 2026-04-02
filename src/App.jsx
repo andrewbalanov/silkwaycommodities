@@ -6,6 +6,7 @@ import Products from './pages/Products'
 import Geography from './pages/Geography'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="geography" element={<Geography />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-of-service" element={<TermsOfService />} />
         </Route>
       </Routes>
     </BrowserRouter>
