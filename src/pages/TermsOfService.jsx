@@ -3,7 +3,7 @@ import './PrivacyPolicy.css'
 function TermsOfService() {
   return (
     <>
-      <section className="section" style={{ paddingBottom: 100 }}>
+      <section className="section privacy-section" style={{ paddingBottom: 100 }}>
         <div className="container">
           <div className="privacy">
             <h1>Terms of Service</h1>

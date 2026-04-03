@@ -191,6 +191,9 @@
     grid-template-columns: 1fr;
     gap: 32px;
   }
+  .footer__logo {
+    display: none;
+  }
   .footer__bottom-inner {
     flex-direction: column;
     gap: 12px;

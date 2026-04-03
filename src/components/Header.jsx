@@ -38,7 +38,13 @@ function Header() {
       <header className={headerClass}>
         <div className="header__inner container">
           {/* Logo */}
-          <Link to="/" className="header__logo">
+          <Link
+            to="/"
+            className="header__logo"
+            onClick={() => {
+              if (isHome) window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
             <div className="header__logo-icon">S</div>
             <div className="header__logo-text">
               <span className="header__logo-name">SILKWAY</span>
