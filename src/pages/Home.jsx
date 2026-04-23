@@ -4,7 +4,7 @@ import './Home.css'
 const stats = [
   { value: '15+', label: 'Countries Served' },
   { value: '50+', label: 'Products Traded' },
-  { value: '2', label: 'Strategic Offices' },
+  { value: '6', label: 'Markets Covered' },
   { value: '24/7', label: 'Operations' },
 ]
 
