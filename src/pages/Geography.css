@@ -1,9 +1,12 @@
 /* ===== OFFICES ===== */
 .geo__offices-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 32px;
   margin-top: 56px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .geo__office {

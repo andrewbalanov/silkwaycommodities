@@ -69,7 +69,7 @@ function About() {
               </h2>
               <p className="section-subtitle">
                 Silkway Commodities is an international commodity trading company
-                based in Dubai, UAE, and Tashkent, Uzbekistan.
+                based in Tashkent, Uzbekistan.
               </p>
               <p className="about__text">
                 We specialize in sourcing and supplying fertilizers, agricultural

@@ -3,17 +3,6 @@ import './Geography.css'
 
 const offices = [
   {
-    city: 'Dubai',
-    country: 'United Arab Emirates',
-    flag: '🇦🇪',
-    type: 'Office',
-    address: 'DMCC Business Centre, Jewellery & Gemplex 3',
-    addressLine2: 'Jumeirah Lakes Towers, Dubai, UAE',
-    email: 'trade@silkwaycommodities.com',
-    features: ['International Trade Hub', 'Maritime Logistics Gateway', 'Free Zone'],
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
-  },
-  {
     city: 'Tashkent',
     country: 'Uzbekistan',
     flag: '🇺🇿',
@@ -113,11 +102,11 @@ function Geography() {
           <div className="section-header-center">
             <span className="section-label">Our Offices</span>
             <h2 className="section-title">
-              Two Strategic <span>Locations</span>
+              Our Strategic <span>Location</span>
             </h2>
             <p className="section-subtitle">
-              Positioned at the crossroads of key commodity trade routes, our offices
-              in Dubai and Tashkent enable efficient operations across multiple markets.
+              Positioned at the crossroads of key commodity trade routes, our office
+              in Tashkent enables efficient operations across multiple markets.
             </p>
           </div>
 

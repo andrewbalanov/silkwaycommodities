@@ -57,7 +57,7 @@ function Home() {
         <div className="hero__content container">
           <div className="hero__tag">
             <span className="hero__tag-dot" />
-            Dubai · Tashkent
+            Tashkent
           </div>
 
           <h1 className="hero__title">
@@ -118,7 +118,7 @@ function Home() {
               </h2>
               <p className="section-subtitle">
                 Silkway Commodities is an international trading company
-                based in Dubai, UAE, and Tashkent, Uzbekistan.
+                based in Tashkent, Uzbekistan.
                 We specialize in sourcing and supplying fertilizers, agricultural
                 products, and petrochemicals to markets across the globe.
               </p>

@@ -144,21 +144,6 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <div className="contact__card-label">Dubai Office</div>
-                    <span className="contact__card-value">
-                      DMCC Business Centre, Jewellery & Gemplex 3, JLT, Dubai
-                    </span>
-                  </div>
-                </div>
-
-                <div className="contact__card">
-                  <div className="contact__card-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
-                      <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
-                    </svg>
-                  </div>
-                  <div>
                     <div className="contact__card-label">Tashkent Office</div>
                     <span className="contact__card-value">
                       6-Tor Ko'chasi, 23, Tashkent, Uzbekistan
@@ -175,7 +160,7 @@ function Contact() {
                   <div>
                     <div className="contact__card-label">Working Hours</div>
                     <span className="contact__card-value">
-                      Sun–Thu: 09:00–18:00 (GST) · Mon–Fri: 09:00–18:00 (UZT)
+                      Mon–Fri: 09:00–18:00 (UZT)
                     </span>
                   </div>
                 </div>
